@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+  <info organisation="com.github.rosjava.android_remocons" module="talker" revision="0.2.0" status="integration" publication="20151216023040">
+    <description/>
+  </info>
+  <configurations>
+    <conf name="_indigoDebugApk" visibility="private" description="## Internal use, do not manually configure ##" extends="apk,compile,debugApk,debugCompile,indigoApk,indigoCompile,indigoDebugApk,indigoDebugCompile"/>
+    <conf name="_indigoDebugCompile" visibility="private" description="## Internal use, do not manually configure ##" extends="compile,debugCompile,debugProvided,indigoCompile,indigoDebugCompile,indigoDebugProvided,indigoProvided,provided"/>
+    <conf name="_indigoDebugTestApk" visibility="private" description="## Internal use, do not manually configure ##" extends="androidTestApk,androidTestCompile,androidTestIndigoApk,androidTestIndigoCompile"/>
+    <conf name="_indigoDebugTestCompile" visibility="private" description="## Internal use, do not manually configure ##" extends="androidTestCompile,androidTestIndigoCompile,androidTestIndigoProvided,androidTestProvided"/>
+    <conf name="_indigoReleaseApk" visibility="private" description="## Internal use, do not manually configure ##" extends="apk,compile,indigoApk,indigoCompile,indigoReleaseApk,indigoReleaseCompile,releaseApk,releaseCompile"/>
+    <conf name="_indigoReleaseCompile" visibility="private" description="## Internal use, do not manually configure ##" extends="compile,indigoCompile,indigoProvided,indigoReleaseCompile,indigoReleaseProvided,provided,releaseCompile,releaseProvided"/>
+    <conf name="androidJacocoAgent" visibility="private" description="The Jacoco agent to use to get coverage data."/>
+    <conf name="androidJacocoAnt" visibility="private" description="The Jacoco ant tasks to use to get execute Gradle tasks."/>
+    <conf name="androidTestApk" visibility="private" description="Classpath packaged with the compiled 'androidTest' classes."/>
+    <conf name="androidTestCompile" visibility="private" description="Classpath for compiling the androidTest sources."/>
+    <conf name="androidTestIndigoApk" visibility="private" description="Classpath packaged with the compiled 'androidTestIndigo' classes."/>
+    <conf name="androidTestIndigoCompile" visibility="private" description="Classpath for compiling the androidTestIndigo sources."/>
+    <conf name="androidTestIndigoProvided" visibility="private" description="Classpath for only compiling the androidTestIndigo sources."/>
+    <conf name="androidTestIndigoWearApp" visibility="private" description="Link to a wear app to embed for object 'androidTestIndigo'."/>
+    <conf name="androidTestProvided" visibility="private" description="Classpath for only compiling the androidTest sources."/>
+    <conf name="androidTestWearApp" visibility="private" description="Link to a wear app to embed for object 'androidTest'."/>
+    <conf name="apk" visibility="private" description="Classpath packaged with the compiled 'main' classes."/>
+    <conf name="archives" visibility="public" description="Configuration for archive artifacts."/>
+    <conf name="compile" visibility="private" description="Classpath for compiling the main sources."/>
+    <conf name="debugApk" visibility="private" description="Classpath packaged with the compiled 'debug' classes."/>
+    <conf name="debugCompile" visibility="private" description="Classpath for compiling the debug sources."/>
+    <conf name="debugProvided" visibility="private" description="Classpath for only compiling the debug sources."/>
+    <conf name="debugWearApp" visibility="private" description="Link to a wear app to embed for object 'debug'."/>
+    <conf name="default" visibility="public" description="Configuration for default artifacts."/>
+    <conf name="indigoApk" visibility="private" description="Classpath packaged with the compiled 'indigo' classes."/>
+    <conf name="indigoCompile" visibility="private" description="Classpath for compiling the indigo sources."/>
+    <conf name="indigoDebugApk" visibility="private" description="Classpath packaged with the compiled 'indigoDebug' classes."/>
+    <conf name="indigoDebugCompile" visibility="private" description="Classpath for compiling the indigoDebug sources."/>
+    <conf name="indigoDebugProvided" visibility="private" description="Classpath for only compiling the indigoDebug sources."/>
+    <conf name="indigoDebugWearApp" visibility="private" description="Link to a wear app to embed for object 'indigoDebug'."/>
+    <conf name="indigoProvided" visibility="private" description="Classpath for only compiling the indigo sources."/>
+    <conf name="indigoReleaseApk" visibility="private" description="Classpath packaged with the compiled 'indigoRelease' classes."/>
+    <conf name="indigoReleaseCompile" visibility="private" description="Classpath for compiling the indigoRelease sources."/>
+    <conf name="indigoReleaseProvided" visibility="private" description="Classpath for only compiling the indigoRelease sources."/>
+    <conf name="indigoReleaseWearApp" visibility="private" description="Link to a wear app to embed for object 'indigoRelease'."/>
+    <conf name="indigoWearApp" visibility="private" description="Link to a wear app to embed for object 'indigo'."/>
+    <conf name="provided" visibility="private" description="Classpath for only compiling the main sources."/>
+    <conf name="releaseApk" visibility="private" description="Classpath packaged with the compiled 'release' classes."/>
+    <conf name="releaseCompile" visibility="private" description="Classpath for compiling the release sources."/>
+    <conf name="releaseProvided" visibility="private" description="Classpath for only compiling the release sources."/>
+    <conf name="releaseWearApp" visibility="private" description="Link to a wear app to embed for object 'release'."/>
+    <conf name="wearApp" visibility="private" description="Link to a wear app to embed for object 'main'."/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="org.ros.android_core" name="android_10" rev="[0.2,0.3)" conf="compile-&gt;default"/>
+    <dependency org="org.ros.rosjava_core" name="rosjava" rev="[0.2,0.3)" conf="compile-&gt;default"/>
+    <dependency org="org.ros.rosjava_core" name="rosjava_tutorial_pubsub" rev="[0.2,0.3)" conf="compile-&gt;default"/>
+    <dependency org="org.ros.rosjava_messages" name="std_msgs" rev="[0.5,0.6)" conf="compile-&gt;default"/>
+    <dependency org="com.github.rosjava.android_remocons" name="common_tools" rev="0.2.0" conf="compile-&gt;default"/>
+    <exclude org="junit" module="*" artifact="*" type="*" ext="*" conf="compile" matcher="exact"/>
+    <exclude org="xml-apis" module="*" artifact="*" type="*" ext="*" conf="compile" matcher="exact"/>
+  </dependencies>
+</ivy-module>
